@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .animate-marquee {
+    display: flex;
+    min-width: 200%;
+    animation: marquee 35s linear infinite;
+  }
+  
+  /* Pause animation on hover */
+  .group:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
+html, body {
+    overflow-x: hidden;
+  }
+
+  /* Hide scrollbar for Webkit (Chrome, Safari) */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge, and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+  
+
